@@ -15,7 +15,6 @@ const initialState: CommentState = {
 export default (state: CommentState = initialState, action: CommentAction ) => {
     switch (action.type) {
         case GET_COMMENTS:
-            console.log(action?.comments);
             return {
                 ...state,
                 comments: action?.comments

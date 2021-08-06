@@ -13,7 +13,6 @@ const initialState: PostState = {
 export default (state: PostState = initialState, action: GetPostAction) => {
     switch (action.type) {
         case GET_POSTS:
-            console.log(action?.posts);
             return {
                 ...state,
                 posts: action?.posts
