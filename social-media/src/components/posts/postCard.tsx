@@ -22,14 +22,16 @@ export const Post: React.FC<Props> = ({ post }) => {
 
     const handleShowClick = (id: number) => {
         setAssociatedComments(comments.filter((c: IComment) => c.postId === id));
-        setShowComments(true);
+        setShowComments(!showComments);
     }
 
     return (
         <div className="card my-5 post-card">
             <div className="card-body">
-                <h5 className="card-title">{post.title}</h5>
-                <p className="card-text">{post.body}</p>
+                <div onClick={() => handleShowClick(post.id)} className="mb-2 hoverable text-black">
+                    <h5 className="card-title">{post.title}</h5>
+                    <p className="card-text">{post.body}</p>
+                </div>
                 {showComments ? (
                     <>
                         <p onClick={() => setShowComments(false)} className="hoverable" >Hide All Comments</p>
