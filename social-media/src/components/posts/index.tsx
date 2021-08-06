@@ -38,7 +38,7 @@ const App: React.FC = () => {
         <div className="row">
           <h1 className="col-lg-8 col-md-8 col-sm-6 col-6">All Posts</h1>
           <input 
-            className="col-lg-4 col-md-4 col-sm-5 col-5 search-textbox my-auto mx-1" 
+            className="col-lg-4 col-md-4 col-sm-5 col-5 search-textbox my-auto" 
             type="text" 
             placeholder="Search"
             onChange={(event)=>setFilterText(event.target.value)} />
