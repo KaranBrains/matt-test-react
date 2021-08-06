@@ -13,7 +13,7 @@ export const Post: React.FC<Props> = ({ post }) => {
 
     const [associatedComments, setAssociatedComments] = React.useState<IComment[]>([])
 
-    const [showComments, setShowComments] = React.useState<Boolean>(false)
+    const [showComments, setShowComments] = React.useState<boolean>(false)
 
     const comments: readonly IComment[] = useSelector(
         (state: RootReducer) => state?.commentsReducer.comments,

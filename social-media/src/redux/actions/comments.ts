@@ -20,7 +20,7 @@ export const getComments = () => async ( dispatch: DispatchCommentType ) => {
 
 export const addComment = (formData:IComment) => async ( dispatch: DispatchCommentType ) => {
     try {
-        let comments : IComment[] = [];
+        const comments : IComment[] = [];
         comments.push(formData);
         dispatch({ type: ADD_COMMENT, comments: comments });
     } catch (e) {
