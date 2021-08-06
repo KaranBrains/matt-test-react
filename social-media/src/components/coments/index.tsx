@@ -1,8 +1,4 @@
 import * as React from "react"
-import { useSelector, shallowEqual, useDispatch } from "react-redux"
-import { getComments } from "../../redux/actions/comments"
-import { Dispatch } from "redux"
-import { RootReducer } from "../../redux/reducers/rootReducer"
 import { IComment } from "../../types/comment"
 
 type Props = {

@@ -6,13 +6,7 @@ import { Dispatch } from "redux"
 import { IPost } from "../../types/post"
 import './styles.css'
 import { RootReducer } from "../../redux/reducers/rootReducer"
-import { IComment } from "../../types/comment"
 import { Post } from "./postCard"
-
-interface ShowComment {
-  id: number
-  show: boolean
-} 
 
 const App: React.FC = () => {
 
