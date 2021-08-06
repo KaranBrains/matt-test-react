@@ -16,7 +16,7 @@ export default (state: PostState = initialState, action: GetPostAction) => {
             console.log(action?.posts);
             return {
                 ...state,
-                state: action?.posts
+                posts: action?.posts
             }
         default:
             return {
