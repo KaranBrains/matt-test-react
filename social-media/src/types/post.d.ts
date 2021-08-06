@@ -1,17 +1,17 @@
-interface IPost {
+export interface IPost {
     id: number
     userId: number
     title: string
     body: string
-  }
-  
-  type PostState = {
+}
+
+type PostState = {
     posts: IPost[]
-  }
-  
-  type PostAction = {
+}
+
+type GetPostAction = {
     type: string
-    post: IPost
-  }
-  
-  type DispatchType = (args: PostAction) => PostAction
+    posts: IPost[]
+}
+
+type DispatchPostType = (args: GetPostAction) => GetPostAction

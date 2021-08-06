@@ -12,7 +12,7 @@ interface IComment {
   
   type CommentAction = {
     type: string
-    comment: IComment
+    comments: IComment[]
   }
   
-  type DispatchType = (args: CommentAction) => CommentAction
+  type DispatchCommentType = (args: CommentAction) => CommentAction
