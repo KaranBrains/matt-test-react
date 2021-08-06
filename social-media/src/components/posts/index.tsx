@@ -17,7 +17,7 @@ const App: React.FC = () => {
 
   React.useEffect(() => {
     dispatch(getPosts());
-  }, [])
+  }, [dispatch])
 
   return (
     <div className="container">
@@ -33,7 +33,7 @@ const App: React.FC = () => {
                   <div className="card">
                     <div className="card-body">
                       <input type="text" className="w-100" />
-                      <button className="btn btn-secondary add-comment mt-2">Add Comment</button>
+                      <button className="btn btn-secondary add-comment mt-2"> Add Comment </button>
                     </div>
                   </div>
                 </div>
