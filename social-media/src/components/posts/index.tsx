@@ -4,7 +4,6 @@ import { getPosts } from "../../redux/actions/posts"
 import { getComments } from "../../redux/actions/comments"
 import { Dispatch } from "redux"
 import { IPost } from "../../types/post"
-import './styles.css'
 import { RootReducer } from "../../redux/reducers/rootReducer"
 import { Post } from "./postCard"
 

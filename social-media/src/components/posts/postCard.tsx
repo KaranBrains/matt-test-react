@@ -26,16 +26,16 @@ export const Post: React.FC<Props> = ({ post }) => {
     }
 
     return (
-        <div className="card my-5" key={post.id}>
+        <div className="card my-5" >
             <div className="card-body">
                 <h5 className="card-title">{post.title}</h5>
                 <p className="card-text">{post.body}</p>
                 {showComments ? (
                     <>
-                        <p onClick={() => setShowComments(false)}>Hide All Comments</p>
+                        <p onClick={() => setShowComments(false)} className="hoverable" >Hide All Comments</p>
                         <Comments comments={associatedComments} />
                     </>
-                ) : <p onClick={() => handleShowClick(post.id)}>Show All Comments</p> }
+                ) : <p onClick={() => handleShowClick(post.id)} className="hoverable" >Show All Comments</p> }
             </div>
         </div>
     )

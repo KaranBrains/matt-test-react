@@ -1,5 +1,7 @@
 import * as React from "react"
 import { IComment } from "../../types/comment"
+import { CommentCard } from "./commentCard"
+import "./styles.css"
 
 type Props = {
     comments: IComment[]
@@ -12,7 +14,7 @@ export const Comments: React.FC<Props> = ({ comments }) => {
                 {comments && comments.length > 0 ? (
                     comments.map((c: IComment) => {
                         return (
-                            <input type="text" className="w-100" value={c.body} readOnly key={c.id}/>
+                            <CommentCard comment={c} key={c.id} />
                         )
                     })
                 ) : "No Comments Yet"}
