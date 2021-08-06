@@ -24,9 +24,45 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <style>
+      #preloader {
+        position: fixed;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10000;
+        background: #fff;
+        overflow: hidden !important;
+      }
+      #status {
+        width: 250px;
+        height: 100px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url("./loader.gif");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    </style>
+    <title>Test React App</title>
   </head>
-  <body>
+  <body onload="preloader()">
+    <div id="preloader">
+      <div id="status"></div>
+    </div>
+    <script>
+      var myVar;
+      function preloader() {
+        myVar = setTimeout(showPage, 2000);
+      }
+      function showPage() {
+        document.getElementById("preloader").style.display = "none";
+      }
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
