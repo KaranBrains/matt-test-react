@@ -10,7 +10,7 @@ type CommentState = {
   comments: IComment[]
 }
 
-type GetCommentAction = {
+type CommentAction = {
   type: string
   comments: IComment[]
 }

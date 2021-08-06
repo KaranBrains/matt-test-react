@@ -33,7 +33,7 @@ export const Post: React.FC<Props> = ({ post }) => {
                 {showComments ? (
                     <>
                         <p onClick={() => setShowComments(false)} className="hoverable" >Hide All Comments</p>
-                        <Comments comments={associatedComments} />
+                        <Comments comments={associatedComments} id={comments.length} />
                     </>
                 ) : <p onClick={() => handleShowClick(post.id)} className="hoverable" >Show All Comments</p> }
             </div>
